@@ -3,12 +3,14 @@
 
 :root{
 color-scheme: dark;
---bg: #0b1020;
---panel: #141c31;
---text: #eef2ff;
---muted: #aab7d1;
---accent: #64d8ff;
---line: #283550;}
+--bg: #0b0911;
+--panel: #1b1428;
+--text: #e5dff1;
+--muted: #b9afc8;
+--effect: #b72e52;    
+--accent: #a783e8;
+--line: #40314e;
+}
 
 * {
     box-sizing: border-box
@@ -37,7 +39,7 @@ a:focus{
 }
 header{
     border-bottom: 1px solid var(--line);
-    background: #0b1020ee;
+    background: #0b0911ee;
     position: sticky;
     top: 0;
     z-index: 5;
@@ -49,6 +51,8 @@ nav{
     align-items: center;
     gap: 16px 0;
     flex-wrap: wrap;
+    height: 50px;
+    font-size: 22px;
 }
 nav .brand{
     font-weight: 800;
@@ -76,6 +80,7 @@ main section{
 }
 .hero{
     padding: 110px 0 80px;
+    background: radial-gradient(ellipse at 80% 15%, #321d453b, transparent 65%);
 }
 
 .eyebrow{
@@ -129,14 +134,25 @@ h3{
     border: 1px solid var(--accent);
     border-radius: 10px;
     font-weight: 700;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.btn:hover{
+    transform: translateY(-2px);
 }
 
 .btn.primary{
-    background-color: var(--accent);
-    color: #071321;
+    background: var(--effect);
+    background-color: var(--effect);
+    color: #ffffff;
+}
+.btn.primary:hover{
+    background: #d33b61;
 }
 .btn.secondary{
     background-color: var(--accent);
+}
+.btn.secondary:hover{
+    background: #a783e81c;
 }
 
 .grid {
@@ -150,6 +166,11 @@ h3{
     border: 1px solid var(--line);
     border-radius: 10px;
     overflow: hidden;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.card:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
 }
 .preview{
     min-height: 175px;
@@ -157,13 +178,13 @@ h3{
     place-items: center;
     text-align: center;
     padding:24px;
-    color: #bcd0f2;
-    background: linear-gradient(135deg, #19314e, #172039); /* the values should be right from svangged old project  */
+    color: #ded0f7;
+    background: linear-gradient(135deg, #38203c, #171125); /* the values should be right from svangged old project  */
     border-bottom: 1px solid var(--line);
 }
 
 .card-content{
-    padding: 16px;
+    padding: 20px;
 }
 
 .card p {
@@ -173,7 +194,7 @@ h3{
 .card-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 14px;
 }
 
 .tags {
@@ -184,22 +205,22 @@ h3{
 }
 
 .tag{
-    border: 1px solid var(#38506d);
-    background: #17263e;
+    border: 1px solid #604688;
+    background: #30213d;
     border-radius: 999px;
     padding: 3px 10px;
     font-size: 0.8rem;
-    color: #cce4fc;
+    color: #dac6f8;
 }
 
 .skills{
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 10px;
 }
 
 .skill{
-    padding: 16px;
+    padding: 11px 16px;
     background: var(--panel);
     border: 1px solid var(--line);
     border-radius: 10px;
@@ -236,4 +257,8 @@ h3{
     main section{
         padding: 48px 0;
     }
+}
+@media (prefers-reduced-motion: reduce) {
+    html{scroll-behavior: auto;}
+    .btn .card { transition: none; }
 }
