@@ -150,6 +150,7 @@ h3{
 }
 .btn.secondary{
     background-color: var(--accent);
+    color : #ffffff;
 }
 .btn.secondary:hover{
     background: #a783e81c;
@@ -195,6 +196,11 @@ h3{
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
+}
+
+.gif-control{
+    width: 110%;
+    height: 110%;
 }
 
 .tags {
