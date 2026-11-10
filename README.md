@@ -1,2 +1,8 @@
 # Yoru-Raijin.github.io
-My portfolio site  
+
+My portfolio site
+
+
+
+Emojis and icons sourced from https://emojicombos.com/
+

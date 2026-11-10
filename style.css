@@ -58,7 +58,7 @@ nav .brand{
     font-weight: 800;
     color: var(--text);
     text-decoration: none;
-    letter-spacing: -1px; /* tweak later */
+    letter-spacing: 0.02rem; /* tweak later */
 }
 
 nav .links{
